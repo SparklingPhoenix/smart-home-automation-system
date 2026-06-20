@@ -40,7 +40,7 @@ The infrastructure was designed to allow future cable additions and modification
 
 ### Hardware
 
-* Arduino Mega 2560 Pro
+* Arduino Mega 2560 Pro (version Mini)
 * Orange Pi Zero 2
 * Industrial GSM module (NEOWAY M590)
 * ADUM1201 isolated TTL level shifter
