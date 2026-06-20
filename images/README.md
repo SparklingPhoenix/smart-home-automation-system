@@ -11,3 +11,5 @@
 ### Controller Stack
 
 ![Controller Stack](SSR-and-controller-stack.jpg)
+
+For additional photographs and hardware details, see [Hardware Documentation](docs/hardware.md)
