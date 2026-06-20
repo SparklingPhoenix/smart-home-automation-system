@@ -12,4 +12,4 @@
 
 ![Controller Stack](SSR-and-controller-stack.jpg)
 
-For additional photographs and hardware details, see [Hardware Documentation](smart-home-automation-system/docs/hardware.md)
+For additional photographs and hardware details, see [Hardware Documentation](hardware.md)
