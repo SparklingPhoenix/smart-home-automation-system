@@ -8,6 +8,10 @@ Unlike many retrofit solutions, the system was planned and integrated during the
 
 The project started as a personal initiative to learn low-level automation systems, embedded development, and IoT technologies using affordable and widely available hardware platforms. Over time, it evolved into a fully operational smart home system that has been continuously used and improved in a real-world environment.
 
+### Main Control Cabinet
+
+![Main Control Cabinet](images/power-and-control-cabinet.jpg)
+
 ## Design Principles
 
 Several key principles guided the development of the system:
