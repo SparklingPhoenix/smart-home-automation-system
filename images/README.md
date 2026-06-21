@@ -15,8 +15,8 @@
 
 ### Initial Installation Phase
 
-![Initial Installation Phase 1]start-of-instalation-1.jpg
-![Initial Installation Phase 2]start-of-instalation-1.jpg
+![Initial Installation Phase 1](start-of-instalation-1.jpg)
+![Initial Installation Phase 2](start-of-instalation-1.jpg)
 
 ### Main Control Cabinet Closed
 
