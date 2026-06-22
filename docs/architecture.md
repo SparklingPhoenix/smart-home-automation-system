@@ -8,6 +8,7 @@ To maximize reliability and service life, the system relies exclusively on wired
 
 Functionally, the system is divided into two distinct control layers. The Arduino-based low-level controller is responsible for real-time interaction with sensors and actuators, execution of automation logic, and control of relay outputs. The Orange Pi high-level controller provides data storage, network connectivity, user interaction, and visualization through a web interface and Telegram integration.
 
+
 ## Architecture Summary
 
 The system follows a centralized wired architecture with a clear separation between real-time control and user-facing services.
@@ -15,6 +16,7 @@ The system follows a centralized wired architecture with a clear separation betw
 The Arduino Mega controller performs deterministic low-level automation tasks, while the Orange Pi Zero 2 provides data storage, network connectivity, and communication interfaces for end users.
 
 This separation allows the automation layer to remain operational independently of web services or Internet connectivity.
+
 
 ## Design Principles
 
@@ -24,6 +26,7 @@ The system was designed according to the following engineering principles:
 * **Reliability** – the system should maintain stable operation under long-term continuous use while remaining serviceable and fault-tolerant.
 * **Simplicity** – the architecture should avoid unnecessary complexity while providing all functionality required by the project.
 * **Standardization** – whenever possible, commonly available and standardized components should be used to simplify maintenance, replacement, and future upgrades.
+
 
 ## Control Layers
 
@@ -48,6 +51,7 @@ Its primary responsibilities include:
 
 The Arduino controller is responsible for all time-critical operations and continues to operate independently of the network infrastructure.
 
+
 ### High-Level Controller
 
 The high-level control layer is implemented using an Orange Pi Zero 2 single-board computer.
@@ -67,6 +71,7 @@ Its primary responsibilities include:
 * exchanging data with the Arduino controller via UART.
 
 Unlike the Arduino controller, the Orange Pi is not involved in direct hardware control. Instead, it serves as the communication, storage, and user interaction layer of the system.
+
 
 ## Communication Interfaces
 
