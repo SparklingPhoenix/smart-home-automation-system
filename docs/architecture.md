@@ -32,9 +32,9 @@ The system was designed according to the following engineering principles:
 The low-level control layer is implemented using an Arduino Mega (Pro Mini version).
 
 <p align="center">
-  <img src="/images/Arduino-Mega-Pro-(Mini)-1.jpg" width="350">
-  <img src="/images/Arduino-Mega-Pro-(Mini)-2.jpg" width="350">
-  <img src="/images/Arduino-Mega-Pro-(Mini)-3.jpg" width="350">
+  <img src="/images/Arduino-Mega-Pro-(Mini)-1.jpg" width="150">
+  <img src="/images/Arduino-Mega-Pro-(Mini)-2.jpg" width="150">
+  <img src="/images/Arduino-Mega-Pro-(Mini)-3.jpg" width="150">
 </p>
 
 Its primary responsibilities include:
@@ -55,12 +55,8 @@ The high-level control layer is implemented using an Orange Pi Zero 2 single-boa
 <p align="center">
   <img src="/images/Orange-Pi-Zero-2(1).png" width="150">
   <img src="/images/Orange-Pi-Zero-2(2).png" width="150">
-  <img src="/images/Orange-Pi-Zero-2(3).png.jpg" width="150">
+  <img src="/images/Orange-Pi-Zero-2(3).png" width="150">
 </p>
-
-![High-Level Controller 1](/images/Orange-Pi-Zero-2(1))
-![High-Level Controller 2](/images/Orange-Pi-Zero-2(2))
-![High-Level Controller 3](/images/Orange-Pi-Zero-2(3))
 
 Its primary responsibilities include:
 
