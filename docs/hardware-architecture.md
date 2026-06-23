@@ -23,9 +23,9 @@ Contains voltage and current measurement devices used for diagnostics, protectio
 ## Hardware Components
 
 <p align="center">
-  <img src="images/start-of-instalation-1.jpg">
-  <img src="images/control-cabinet-overview.jpg">
-  <img src="images/controller-stack.jpg"> 
+  <img src="/images/start-of-instalation-1.jpg">
+  <img src="/images/control-cabinet-overview.jpg">
+  <img src="/images/controller-stack.jpg"> 
 </p>
 
 The following sections describe the major hardware components used in the system.
@@ -33,9 +33,9 @@ The following sections describe the major hardware components used in the system
 ### Arduino Mega Pro Mini (ATmega2560)
 
 <p align="center">
-  <img src="images/Arduino-Mega-Pro-(Mini)-1.jpg" width="350">
-  <img src="images/Arduino-Mega-Pro-(Mini)-2.jpg" width="350">
-  <img src="images/Arduino-Mega-Pro-(Mini)-3.jpg" width="350">
+  <img src="/images/Arduino-Mega-Pro-(Mini)-1.jpg" width="350">
+  <img src="/images/Arduino-Mega-Pro-(Mini)-2.jpg" width="350">
+  <img src="/images/Arduino-Mega-Pro-(Mini)-3.jpg" width="350">
 </p>
 
 #### Role in the System
@@ -69,9 +69,9 @@ Its responsibilities include:
 ### Orange Pi Zero 2
 
 <p align="center">
-  <img src="images/Orange-Pi-Zero-2(1).png" width="350">
-  <img src="images/Orange-Pi-Zero-2(2).png" width="350">
-  <img src="images/Orange-Pi-Zero-2(3).png" width="350">
+  <img src="/images/Orange-Pi-Zero-2(1).png" width="350">
+  <img src="/images/Orange-Pi-Zero-2(2).png" width="350">
+  <img src="/images/Orange-Pi-Zero-2(3).png" width="350">
 </p>
 
 ####  Role in the System
@@ -104,9 +104,9 @@ Its responsibilities include:
 ### ADUM1201 Isolated UART Level Shifter
 
 <p align="center">
-  <img src="images/ADUM1201-1.jpg" width="350">
-  <img src="images/ADUM1201-2.jpg" width="350">
-  <img src="images/ADUM1201-3.jpg" width="350">
+  <img src="/images/ADUM1201-1.jpg" width="350">
+  <img src="/images/ADUM1201-2.jpg" width="350">
+  <img src="/images/ADUM1201-3.jpg" width="350">
 </p>
 
 ####  Role in the System
@@ -130,7 +130,7 @@ Its responsibilities include:
 ### NEOWAY M590 GSM Module
 
 <p align="center">
-  <img src="images/Neoway-M590.avif" width="500">
+  <img src="/images/Neoway-M590.avif" width="500">
 </p>
 
 #### Role in the System
@@ -160,7 +160,7 @@ Following the introduction of the web interface and Telegram integration, the GS
 ### DHT22 Temperature and Humidity Sensors
 
 <p align="center">
-  <img src="images/DHT-22.jpg" width="500">
+  <img src="/images/DHT-22.jpg" width="500">
 </p>
 
 #### Role in the System
@@ -181,8 +181,8 @@ DHT22 sensors are installed indoors and outdoors for environmental monitoring an
 ### AHT10 Temperature and Humidity Sensor
 
 <p align="center">
-  <img src="images/aht10-1.jpg" width="350">
-  <img src="images/aht10-2.jpg" width="350">
+  <img src="/images/aht10-1.jpg" width="350">
+  <img src="/images/aht10-2.jpg" width="350">
 </p>
 
 #### Role in the System
@@ -205,7 +205,7 @@ The AHT10 sensor monitors the temperature of the 12 V power supply unit and prov
 ### ZMPT101B Voltage Sensor
 
 <p align="center">
-  <img src="images/ZMPT101B.jpg" width="500">
+  <img src="/images/ZMPT101B.jpg" width="500">
 </p>
 
 #### Role in the System
@@ -225,7 +225,7 @@ Used for AC mains voltage monitoring and power-quality analysis.
 ### ACS712 Current Sensor
 
 <p align="center">
-  <img src="images/ACS712.jpg" width="500">
+  <img src="/images/ACS712.jpg" width="500">
 </p>
 
 #### Role in the System
@@ -247,7 +247,7 @@ The collected data is used for energy monitoring and overload detection.
 ### Relay Modules (SK1610 with APAN3105 / PA1A-5V Relays)
 
 <p align="center">
-  <img src="images/relay-module-control-board-16-channel.jpg" width="500">
+  <img src="/images/relay-module-control-board-16-channel.jpg" width="500">
 </p>
 
 #### KRole in the System
@@ -275,7 +275,7 @@ Used for switching:
 ### GEYA GSR2-1-40A Solid-State Relay (Zero-Cross)
 
 <p align="center">
-  <img src="images/GSR2-1-40A.png" width="400">
+  <img src="/images/GSR2-1-40A.png" width="400">
 </p>
 
 #### Role in the System
@@ -312,7 +312,7 @@ Reed switches are used for door and window position monitoring as part of the se
 ### Infrared LED Transmitter
 
 <p align="center">
-  <img src="images/IR-LED.jpg" width="500">
+  <img src="/images/IR-LED.jpg" width="500">
 </p>
 
 #### Role in the System
