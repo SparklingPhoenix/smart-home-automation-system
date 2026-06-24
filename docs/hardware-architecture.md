@@ -32,9 +32,9 @@ The following sections describe the major hardware components used in the system
 ### Arduino Mega Pro Mini (ATmega2560)
 
 <p align="center">
-  <img src="/images/Arduino-Mega-Pro-(Mini)-1.jpg" width="150">
-  <img src="/images/Arduino-Mega-Pro-(Mini)-2.jpg" width="150">
-  <img src="/images/Arduino-Mega-Pro-(Mini)-3.jpg" width="150">
+  <img src="/images/Arduino-Mega-Pro-(Mini)-1.jpg" height="100">
+  <img src="/images/Arduino-Mega-Pro-(Mini)-2.jpg" height="100">
+  <img src="/images/Arduino-Mega-Pro-(Mini)-3.jpg" height="100">
 </p>
 
 #### Role in the System
