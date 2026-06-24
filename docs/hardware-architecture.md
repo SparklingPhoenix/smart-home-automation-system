@@ -67,9 +67,9 @@ Its responsibilities include:
 ### Orange Pi Zero 2
 
 <p align="center">
-  <img src="/images/Orange-Pi-Zero-2(1).png" width="150">
-  <img src="/images/Orange-Pi-Zero-2(2).png" width="150">
-  <img src="/images/Orange-Pi-Zero-2(3).png" width="150">
+  <img src="/images/Orange-Pi-Zero-2(1).png" width="200">
+  <img src="/images/Orange-Pi-Zero-2(2).png" width="200">
+  <img src="/images/Orange-Pi-Zero-2(3).png" width="200">
 </p>
 
 ####  Role in the System
@@ -99,14 +99,11 @@ Its responsibilities include:
 
 
 ### ADUM1201 Isolated UART Level Shifter
-<div align="center" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px;">
-  <img src="/images/ADUM1201-1.jpg" 
-       style="height: 340px; width: auto; max-width: 100%; object-fit: contain;">
-  <img src="/images/ADUM1201-2.jpg" 
-       style="height: 340px; width: auto; max-width: 100%; object-fit: contain;"> 
-  <img src="/images/ADUM1201-3.jpg" 
-       style="height: 340px; width: auto; max-width: 100%; object-fit: contain;">
-</div> 
+<p align="center">
+  <img src="/images/ADUM1201-1.jpg" height="200">
+  <img src="/images/ADUM1201-2.jpg" height="200">
+  <img src="/images/ADUM1201-3.jpg" height="200">
+</p>
 
 ####  Role in the System
 * Provides galvanic isolation and level translation between the 5 V Arduino controller and the 3.3 V Orange Pi UART interface.
@@ -129,7 +126,7 @@ Its responsibilities include:
 ### NEOWAY M590 GSM Module
 
 <p align="center">
-  <img src="/images/Neoway-M590.avif" width="250">
+  <img src="/images/Neoway-M590.png" height="200">
 </p>
 
 #### Role in the System
@@ -177,12 +174,10 @@ DHT22 sensors are installed indoors and outdoors for environmental monitoring an
 
 
 ### AHT10 Temperature and Humidity Sensor
-<div align="center" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px;">
-  <img src="/images/aht10-1.jpg" 
-       style="height: 340px; width: auto; max-width: 100%; object-fit: contain;">
-  <img src="/images/aht10-2.jpg" 
-       style="height: 340px; width: auto; max-width: 100%; object-fit: contain;"> 
-</div> 
+<p align="center">
+  <img src="/images/aht10-1.jpg" height="200">
+  <img src="/images/aht10-2.jpg" height="200">
+</p>
 
 #### Role in the System
 The AHT10 sensor monitors the temperature of the 12 V power supply unit and provides thermal protection functionality.
@@ -272,9 +267,8 @@ Used for switching:
 
 
 ### GEYA GSR2-1-40A Solid-State Relay (Zero-Cross)
-
 <p align="center">
-  <img src="/images/GSR2-1-40A.png" width="300">
+  <img src="/images/GSR2-1-40A.png" height="300">
 </p>
 
 #### Role in the System
@@ -311,7 +305,7 @@ Reed switches are used for door and window position monitoring as part of the se
 ### Infrared LED Transmitter
 
 <p align="center">
-  <img src="/images/IR-LED.jpg" width="100">
+  <img src="/images/IR-LED.jpg" width="200">
 </p>
 
 #### Role in the System
