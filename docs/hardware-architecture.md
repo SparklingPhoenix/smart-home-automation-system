@@ -32,9 +32,9 @@ The following sections describe the major hardware components used in the system
 ### Arduino Mega Pro Mini (ATmega2560)
 
 <p align="center">
-  <img src="/images/Arduino-Mega-Pro-(Mini)-1.jpg" height="100">
-  <img src="/images/Arduino-Mega-Pro-(Mini)-2.jpg" height="100">
-  <img src="/images/Arduino-Mega-Pro-(Mini)-3.jpg" height="100">
+  <img src="/images/Arduino-Mega-Pro-(Mini)-1.jpg" height="150">
+  <img src="/images/Arduino-Mega-Pro-(Mini)-2.jpg" height="150">
+  <img src="/images/Arduino-Mega-Pro-(Mini)-3.jpg" height="150">
 </p>
 
 #### Role in the System
@@ -100,9 +100,9 @@ Its responsibilities include:
 
 ### ADUM1201 Isolated UART Level Shifter
 <p align="center">
-  <img src="/images/ADUM1201-1.jpg" height="150">
-  <img src="/images/ADUM1201-2.jpg" height="150">
-  <img src="/images/ADUM1201-3.jpg" height="150">
+  <img src="/images/ADUM1201-1.jpg" height="120">
+  <img src="/images/ADUM1201-2.jpg" height="120">
+  <img src="/images/ADUM1201-3.jpg" height="120">
 </p>
 
 ####  Role in the System
@@ -126,7 +126,7 @@ Its responsibilities include:
 ### NEOWAY M590 GSM Module
 
 <p align="center">
-  <img src="/images/Neoway-M590.png" height="200">
+  <img src="/images/Neoway-M590.png" height="150">
 </p>
 
 #### Role in the System
@@ -155,7 +155,7 @@ Following the introduction of the web interface and Telegram integration, the GS
 
 ### DHT22 Temperature and Humidity Sensors
 <p align="center">
-  <img src="/images/DHT-22.jpg" width="250">
+  <img src="/images/DHT-22.jpg" height="200">
 </p>
 
 #### Role in the System
@@ -175,8 +175,8 @@ DHT22 sensors are installed indoors and outdoors for environmental monitoring an
 
 ### AHT10 Temperature and Humidity Sensor
 <p align="center">
-  <img src="/images/aht10-1.jpg" height="200">
-  <img src="/images/aht10-2.jpg" height="200">
+  <img src="/images/aht10-1.jpg" height="150">
+  <img src="/images/aht10-2.jpg" height="150">
 </p>
 
 #### Role in the System
@@ -268,7 +268,7 @@ Used for switching:
 
 ### GEYA GSR2-1-40A Solid-State Relay (Zero-Cross)
 <p align="center">
-  <img src="/images/GSR2-1-40A.png" height="300">
+  <img src="/images/GSR2-1-40A.png" height="200">
 </p>
 
 #### Role in the System
