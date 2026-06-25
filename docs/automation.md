@@ -19,6 +19,7 @@ The main design goals were:
 The resulting platform combines lighting control, climate management, security, energy monitoring, ventilation control, and remote user interaction within a single integrated architecture.
 
 
+
 ## Lighting Automation
 
 ### Local Lighting Control
@@ -108,6 +109,7 @@ All control methods have equal priority:
 The system automatically resolves state synchronization between all control channels.
 
 For example, if lighting is turned on using a physical switch and later turned off through the web interface or Telegram, the corresponding Arduino scenario is automatically updated to prevent inconsistent behavior.
+
 
 
 ## Climate Control
@@ -232,6 +234,7 @@ Several additional automation scenarios are implemented:
 These interactions demonstrate how climate-control functions are integrated with other automation subsystems throughout the project.
 
 
+
 ## Security System
 
 ### Overview
@@ -349,6 +352,7 @@ Several design decisions were made to improve reliability:
 This architecture minimizes the number of potential failure points while maintaining predictable operation.
 
 
+
 ## Ventilation Control
 
 ### Manual Control
@@ -364,6 +368,7 @@ The following automatic modes and settings are available in the web interface:
 * Auto-start on window opening
 * Ventilation timer — automatically starts countdown after lights are turned off in the respective room
 * Timer duration adjustment
+
 
 
 ## Energy Monitoring
@@ -457,6 +462,7 @@ Sensor accuracy is sufficient for:
 The system should not be considered a replacement for certified utility-grade energy meters.
 
 
+
 ## Notification System
 
 ### Overview
@@ -545,6 +551,7 @@ Actions:
 * Optional Telegram notification
 
 This prioritization prevents notification overload while ensuring that critical events receive immediate attention.
+
 
 
 ## Automation Engine
