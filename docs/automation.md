@@ -87,14 +87,16 @@ Provides quick on/off control for the primary lighting group of each room.
   <source src="/videos/Web-interface-switch-panel-universal.mp4" type="video/mp4">
 </video>
 
+![Web-interface switch panel simplified](https://github.com/user-attachments/assets/50d1a488-3bcf-4e50-b9de-a359f8701ced)
+
+
 #### Detailed View
 Allows the user to select a room and individually control all available lighting groups and lighting scenes.
 <p align="center">
   <img src="/images/screenshot/Web-interface-switch-panel-manual.jpg" height="400">
 </p>
 
-![Web-interface switch panel manual](https://github.com/user-attachments/assets/7641a777-f319-4af5-914e-11264a5deeeb)
-
+![Web-interface switch panel detailed](https://github.com/user-attachments/assets/7641a777-f319-4af5-914e-11264a5deeeb)
 
 A detailed description, screenshots, and demonstration videos are provided in web-interface.md.
 
@@ -160,6 +162,8 @@ The system supports configurable temperature calibration offsets ranging from -3
 <p align="center">
   <img src="/images/screenshot/Web-interface-prefences-panel-2.jpg" height="400">
 </p>
+
+![Telegram-Bot AC starting](https://github.com/user-attachments/assets/7b981c2d-cbd6-4dc6-bd77-a8ab238fd3db)
 
 Calibration values can be adjusted through the web interface.
 
