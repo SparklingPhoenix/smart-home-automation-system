@@ -80,8 +80,8 @@ The lighting section of the web interface consists of two modes:
 #### Simplified View
 Provides quick on/off control for the primary lighting group of each room.
 <p align="center">
-  <img src="/images/screenshot/Web-interface-switch-panel-universal-1.jpg" height="200">
-  <img src="/images/screenshot/Web-interface-switch-panel-universal-1.jpg" height="200">
+  <img src="/images/screenshot/Web-interface-switch-panel-universal-1.jpg" height="350">
+  <img src="/images/screenshot/Web-interface-switch-panel-universal-2.jpg" height="350">
 </p>
 <video width="100%" max-width="720px" controls muted loop>
   <source src="/videos/Web-interface-switch-panel-universal.mp4" type="video/mp4">
