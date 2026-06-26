@@ -82,9 +82,8 @@ Provides quick on/off control for the primary lighting group of each room.
 <p align="center">
   <img src="/images/screenshot/Web-interface-switch-panel-universal-1.jpg" height="350">
 </p>
-<video width="100%" max-width="720px" controls muted loop>
-  <source src="/videos/Web-interface-switch-panel-universal.mp4" type="video/mp4">
-</video>
+
+![Web Interface Universal Panel](/videos/Web-interface-switch-panel-universal.mp4)
 
 #### Detailed View
 Allows the user to select a room and individually control all available lighting groups and lighting scenes.
