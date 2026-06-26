@@ -81,7 +81,6 @@ The lighting section of the web interface consists of two modes:
 Provides quick on/off control for the primary lighting group of each room.
 <p align="center">
   <img src="/images/screenshot/Web-interface-switch-panel-universal-1.jpg" height="350">
-  <img src="/images/screenshot/Web-interface-switch-panel-universal-2.jpg" height="350">
 </p>
 <video width="100%" max-width="720px" controls muted loop>
   <source src="/videos/Web-interface-switch-panel-universal.mp4" type="video/mp4">
@@ -90,7 +89,7 @@ Provides quick on/off control for the primary lighting group of each room.
 #### Detailed View
 Allows the user to select a room and individually control all available lighting groups and lighting scenes.
 <p align="center">
-  <img src="/images/screenshot/Web-interface-switch-panel-manual.jpg" height="200">
+  <img src="/images/screenshot/Web-interface-switch-panel-manual.jpg" height="350">
 </p>
 <video width="100%" max-width="720px" controls muted loop>
   <source src="/videos/Web-interface-switch-panel-manual.mp4" type="video/mp4">
@@ -102,7 +101,7 @@ A detailed description, screenshots, and demonstration videos are provided in we
 
 The Telegram interface largely mirrors the simplified web interface.
 <p align="center">
-  <img src="/images/screenshot/Telegram-bot-menu-light-switch.jpg" height="200">
+  <img src="/images/screenshot/Telegram-bot-menu-light-switch.jpg" height="350">
 </p>
 <video width="100%" max-width="720px" controls muted loop>
   <source src="/videos/Telegram-bot-light-switching.mp4" type="video/mp4">
@@ -159,7 +158,7 @@ Indoor and outdoor temperatures are measured using DHT22 sensors.
 
 The system supports configurable temperature calibration offsets ranging from -3°C to +3°C.
 <p align="center">
-  <img src="/images/screenshot/Web-interface-prefences-panel-2.jpg" height="200">
+  <img src="/images/screenshot/Web-interface-prefences-panel-2.jpg" height="350">
 </p>
 
 Calibration values can be adjusted through the web interface.
@@ -188,7 +187,7 @@ A configurable minimum boiler runtime is enforced.
 
 This runtime was determined experimentally by measuring the time required for the heating circuit to complete a full heating cycle.
 <p align="center">
-  <img src="/images/screenshot/Web-interface-prefences-panel-3.jpg" height="200">
+  <img src="/images/screenshot/Web-interface-prefences-panel-3.jpg" height="350">
 </p>
 
 After each completed cycle, the controller evaluates the residual thermal energy released by the radiators and adjusts the temperature threshold used to initiate the next heating cycle.
@@ -245,7 +244,7 @@ To optimize memory usage, only four commands were implemented:
 * Fan Speed 3
 * Power Off
 <p align="center">
-  <img src="/images/screenshot/Web-interface-prefences-panel-4.jpg" height="200">
+  <img src="/images/screenshot/Web-interface-prefences-panel-4.jpg" height="350">
 </p>
 
 Fan speed selection is performed automatically according to the difference between the current room temperature and the desired setpoint.
@@ -287,8 +286,8 @@ The current security status is synchronized across all user interfaces:
 * Telegram bot
 * GSM notification module
 <p align="center">
-  <img src="/images/screenshot/Web-interface-prefences-panel-7.jpg" height="200">
-  <img src="/images/screenshot/Telegram-bot-menu-security.jpg" height="200">
+  <img src="/images/screenshot/Web-interface-prefences-panel-7.jpg" height="350">
+  <img src="/images/screenshot/Telegram-bot-menu-security.jpg" height="350">
 </p>
 
 The user can enable or disable armed mode through any available control channel.
