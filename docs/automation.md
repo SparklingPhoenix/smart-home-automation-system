@@ -83,13 +83,7 @@ Provides quick on/off control for the primary lighting group of each room.
   <img src="/images/screenshot/Web-interface-switch-panel-universal-1.jpg" height="400">
 </p>
 
-<video src="https://github.com/user-attachments/assets/7c5546d9-9bc2-4213-8bde-598578051641" 
-       controls 
-       muted 
-       loop 
-       height="400" 
-       style="max-width:720px; border-radius:8px;">
-</video>
+![▶ Web-interface switch panel simplified](https://github.com/user-attachments/assets/085925f3-1514-418d-933f-941a7ab71496)
 
 
 #### Detailed View
@@ -98,7 +92,7 @@ Allows the user to select a room and individually control all available lighting
   <img src="/images/screenshot/Web-interface-switch-panel-manual.jpg" height="400">
 </p>
 
-[▶ Web-interface switch panel detailed](https://github.com/user-attachments/assets/085925f3-1514-418d-933f-941a7ab71496)
+![▶ Web-interface switch panel detailed](https://github.com/user-attachments/assets/085925f3-1514-418d-933f-941a7ab71496)
 
 A detailed description, screenshots, and demonstration videos are provided in web-interface.md.
 
@@ -109,7 +103,7 @@ The Telegram interface largely mirrors the simplified web interface.
   <img src="/images/screenshot/Telegram-bot-menu-light-switch.jpg" height="400">
 </p>
 
-[▶ Telegram interface switch panel](https://github.com/user-attachments/assets/fc71ae53-0050-4f0a-af96-23f03e0be8ba)
+![▶ Telegram interface switch panel](https://github.com/user-attachments/assets/fc71ae53-0050-4f0a-af96-23f03e0be8ba)
 
 Due to Telegram platform limitations, real-time automatic state synchronization is not available.
 
@@ -251,7 +245,7 @@ To optimize memory usage, only four commands were implemented:
   <img src="/images/screenshot/Web-interface-prefences-panel-4.jpg" height="400">
 </p>
 
-[▶  Telegram-Bot AC starting](https://github.com/user-attachments/assets/35747932-6cdb-4628-bab7-c12732c35367)
+![▶  Telegram-Bot AC starting](https://github.com/user-attachments/assets/35747932-6cdb-4628-bab7-c12732c35367)
 
 Fan speed selection is performed automatically according to the difference between the current room temperature and the desired setpoint.
 
