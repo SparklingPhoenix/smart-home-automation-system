@@ -2,16 +2,6 @@
 
 ## Overview
 
-![▶ Web-interface switch panel simplified](https://github.com/user-attachments/assets/2a1e025c-6f8e-42c2-952f-84f1f19b82f4)
-
-
-<p align="center">
-  <img src="/images/screenshot/Web-interface-security-on.jpg" height="400">
-  <img src="/images/screenshot/Web-interface-security-off.jpg" height="400">
-</p>
-
-
-
 The Telegram bot was not part of the original smart home design. At the time the project was started, I was not yet familiar with the capabilities of the Telegram Bot API. After the core automation system had already been completed and had been operating reliably for some time, I explored the Telegram API ecosystem and realized that a Telegram bot could become much more than an additional user interface—it could significantly improve the usability and accessibility of the entire system.
 
 The Telegram interface provides several important advantages:
