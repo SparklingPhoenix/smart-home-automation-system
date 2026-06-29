@@ -83,8 +83,8 @@ Provides quick on/off control for the primary lighting group of each room.
   <img src="/images/screenshot/Web-interface-switch-panel-universal.jpg" height="400">
 </p>
 
-![▶ Web-interface switch panel simplified](https://github.com/user-attachments/assets/085925f3-1514-418d-933f-941a7ab71496)
-![▶ Web-interface switch panel simplified](https://github.com/user-attachments/assets/8074750d-926a-4cc7-829e-468fdda59690)
+![▶ Web-interface switch panel simplified](https://github.com/user-attachments/assets/304a6132-7ae1-4911-8a59-213b42d3e81a)
+![▶ Web-interface relay switching](https://github.com/user-attachments/assets/8074750d-926a-4cc7-829e-468fdda59690)
 
 #### Detailed View
 Allows the user to select a room and individually control all available lighting groups and lighting scenes.
@@ -104,7 +104,7 @@ The Telegram interface largely mirrors the simplified web interface.
 </p>
 
 ![▶ Telegram interface switch panel](https://github.com/user-attachments/assets/fc71ae53-0050-4f0a-af96-23f03e0be8ba)
-![▶ Telegram interface switch panel](https://github.com/user-attachments/assets/599a9dbd-9995-476c-bfcd-f2c7efe47c27)
+![▶ Telegram interface relay switching](https://github.com/user-attachments/assets/599a9dbd-9995-476c-bfcd-f2c7efe47c27)
 
 Due to Telegram platform limitations, real-time automatic state synchronization is not available.
 
