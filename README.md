@@ -92,7 +92,10 @@ The repository includes complete electrical documentation of the control cabinet
 
 Full printable version:
 
-📄 /docs/schematics/Wire-Diagram.pdf
+📄 (/docs/schematics/Wire-diagram-(schematics).pdf)
+
+📄 (/docs/schematics/Correlation-table.pdf)
+
 
 
 ## Project Status
