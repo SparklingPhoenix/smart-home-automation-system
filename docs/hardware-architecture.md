@@ -340,7 +340,7 @@ Used for air-conditioner control by transmitting infrared commands that emulate 
 See the complete wiring diagram below.
 
 ![Wiring](/images/schematics/wire-diagram-(schematics).pdf)
-
+![Correlation Table](/images/schematics/Correlation-table.pdf)
 
 ### Hardware Summary
 
