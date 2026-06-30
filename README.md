@@ -89,22 +89,22 @@ The system follows a two-layer architecture. The Arduino-based controller handle
 The repository includes complete electrical documentation of the control cabinet.
 
 ### Power Distribution
-
-![220V](/images/schematics/01-power-220v.png)
-
-![12V](/images/schematics/02-power-12v.png)
-
-![5V](/images/schematics/03-power-5v.png)
+<p align="center">
+  <img src="/images/screenshot/01-power-220v.png" width="400">
+  <img src="/images/screenshot/02-power-12v.png" width="400">
+  <img src="/images/screenshot/03-power-5v.png" width="400">
+</p>
 
 ### Controller I/O
-
-![Outputs](/images/schematics/04-outputs.png)
-
-![Inputs](/images/schematics/05-inputs.png)
+<p align="center">
+  <img src="/images/screenshot/04-outputs.png" width="400">
+  <img src="/images/screenshot/05-inputs.png" width="400">
+</p>
 
 ### Wiring Table
-
-![Wiring](/images/schematics/06-wiring-table.png)
+<p align="center">
+  <img src="/images/screenshot/06-wiring-table.png" width="400">
+</p>
 
 Full printable version:
 
