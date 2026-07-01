@@ -9,15 +9,15 @@ Communication parameters:
 * Baud rate: 57600
 * Format: 8N1
 
-Arduino
+     Arduino
         │
         ▼
-UART Listener (C)
+ UART Listener (C)
         │
         ▼
-Linux
- ├── Apache
- ├── PHP
- ├── Python
- └── MariaDB
+      Linux
+        ├── Apache
+        ├── PHP
+        ├── Python
+        └── MariaDB
  
