@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 1% 1% 0% 1%;
+  background-color: rgb(5, 4, 3);
+}
+
+/* классы для выпадающих закладок меню */
+.hdv {
+  display: none;
+  transition: 2s;
+}
+.hdv + label ~ div {
+  border: 2px solid #4c4747;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  background-color: rgb(57, 57, 57);
+  position: absolute;
+  height: auto;
+  max-height: 0;
+  visibility: hidden;
+  -webkit-transition: max-height 2s;
+  transition: max-height 2s;
+}
+.hdv + label {
+  padding: 15px 30px 15px 10px;
+  border: 2px solid #565656;
+  background-color: rgb(45, 43, 43);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20px;
+  /* color: rgb(154, 153, 153); */
+}
+
+.hdv:checked + label {
+  background: #4d4d4d;
+  color: #333e9a;
+  border-bottom: 0;
+  /* transition: 500ms; */
+}
+.hdv:checked + label + div {
+  display: block;
+  position: relative;
+  max-height: 1000px;
+  visibility: visible;
+}
+.hdv:checked + label + div:last-child {
+  border-bottom: 1px solid #565656;
+}
+
+/* классы для содержимого контейнеров */
+.container {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  color: rgb(142, 142, 142);
+  display: flex;
+  flex-direction: column;
+  padding: 3px 2% 3px 2%;
+  align-items: center;
+}
+
+.value {
+  /* margin: 2px 0px 2px 0px; */
+  padding: 5px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  background-color: inherit;
+  max-height: 100%; 
+  max-width: 100%; 
+  /* border: 1px solid rgb(95, 95, 95); */
+}
+
+.sub {
+  margin: 0px 0px 0px 0px;
+  /* padding: 5px 0px 5px 0px; */
+  border-top: 1px solid;
+  border-image: linear-gradient(
+      90deg,
+      rgb(57, 57, 57),
+      #6a6a6a,
+      rgb(57, 57, 57)
+    )
+    1;
+}
+
+.row_unit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  /* background-color: inherit; */
+  background-color: rgb(51, 51, 51);
+  /* border: 1px; */
+  border-radius: 10px;
+  padding: 0px;
+  margin: 2px 0px 2px 0px;
+}
+
+.left_block {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  /* flex-wrap: nowrap; */
+  width: 65%;
+  background-color: inherit;
+  padding: 0px;
+  /* margin: 2px 0px 2px 0px; */
+}
+
+.right_block {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  /* flex-wrap: nowrap; */
+  width: 35%;
+  background-color: inherit;
+  padding: 0px;
+  /* margin: 2px 0px 2px 0px; */
+}
+
+.title {
+  padding: 0px;
+  margin: 0px;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  padding: 0px;
+  margin: 0.5rem auto 0.7rem auto;
+  background-color: inherit;
+  display: block;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 97%;
+  background: #646464;
+  height: 0.4rem;
+  border: 1px solid rgb(183, 108, 80);
+  border-radius: 0.15rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: rgb(183, 108, 80);
+  height: 2.0rem;
+  width: 0.9rem;
+  margin-top: -0.15rem;
+  border-radius: 0.3rem;
+}
+
+.switch-btn {
+  display: inline-block;
+  width: 40px; /* ширина */
+  height: 18px; /* высота */
+  border-radius: 19px; /* радиус скругления */
+  background: #646464; /* цвет фона */
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 300ms; /* анимация */
+}
+.switch-btn::after {
+  content: "";
+  height: 18px; /* высота кнопки */
+  width: 18px; /* ширина кнопки */
+  border-radius: 17px;
+  background: rgb(155, 155, 155); /* цвет кнопки */
+  top: 0px; /* положение кнопки по вертикали относительно основы */
+  left: 3px; /* положение кнопки по горизонтали относительно основы */
+  transition-duration: 300ms; /* анимация */
+  position: absolute;
+  z-index: 1;
+}
+.switch-on {
+  background: #9c5e5e;
+}
+.switch-on::after {
+  left: 17px;
+}
+
+.button_stepper {
+  background-color: inherit; 
+  color: inherit; 
+  margin-left: auto; 
+  height: 22px;
+  width: 90px; 
+  border-radius: 4px
+}
+
+.thermo_stepper {
+  background-color: inherit; 
+  color: inherit; 
+  margin-left: auto; 
+  width: 90px; 
+  height: 25px;
+  border-radius: 4px
+}
+
+.input_stepper {
+  background-color: inherit;
+  color: inherit;  
+  text-align: right;
+  border-radius: 3px; 
+  height: 14px;
+  width: 84px; 
+}
+
+.gsm_btn {
+  display: flex;
+  /* align-items: center; */
+  margin: 0px auto 0px 0px;
+  font-family: inherit; 
+  font-size: 15px; 
+  color: inherit; 
+  background-color: inherit; 
+  height: auto;
+  border-radius: 5px;
+}
