@@ -9,6 +9,7 @@ Communication parameters:
 * Baud rate: 57600
 * Format: 8N1
 
+```text
      Arduino
         │
         ▼
@@ -20,4 +21,4 @@ Communication parameters:
         ├── PHP
         ├── Python
         └── MariaDB
- 
+ ```
