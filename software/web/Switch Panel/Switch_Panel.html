@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch_Panel</title>
+    <link rel="stylesheet" href="Switch_Panel.css" />
+    <audio id="audio" src="Click.wav" autoplay="false"></audio>
+    <script src="jquery.js"></script>
+    <script src="Switch_Panel.js"></script>
+  </head>
+  <body>
+    <div class="tab">
+      <div class="half-tab"> 
+        <button class="tablinks active" onclick="openCity(event, 'Universal')" id="defaultOpen">
+          Universal
+        </button>
+      </div>
+      <div class="half-tab">
+        <button class="tablinks " onclick="openCity(event, 'Manual')">
+          Manual
+        </button>
+    </div>
+    </div>
+    <div id="Universal" class="tabcontent">
+      <div class="container">
+        <button class="button color_12_off transition_off" id="button_12">
+          Kill'em All!
+        </button>
+        <button class="button color_1_off transition_off" id="button_1">
+          Передпокій
+        </button>
+        <button class="button color_2_off transition_off" id="button_2">
+          Спальня
+        </button>
+        <button class="button color_3_off transition_off" id="button_3">
+          Вбиральня
+        </button>
+        <button class="button color_4_off transition_off" id="button_4">
+          Санвузол
+        </button>
+        <button class="button color_5_off transition_off" id="button_5">
+          Вітальня
+        </button>
+        <button class="button color_6_off transition_off" id="button_6">
+          Кухня
+        </button>
+        <button class="button color_7_off transition_off" id="button_7">
+          Кабінет
+        </button>
+        <button class="button color_8_off transition_off" id="button_8">
+          Витяжка у санвузлу
+        </button>
+        <button class="button color_9_off transition_off" id="button_9">
+          Витяжка у спальні
+        </button>
+        <button class="button color_10_off transition_off" id="button_10">
+          Amplifier
+        </button>
+        <button class="button color_11_off transition_off" id="button_11">
+          Bluetooth
+        </button>
+        <button class="button color_13_off transition_off" id="button_13">
+          Котел
+        </button>
+        <button class="button color_14_off transition_off" id="button_14">
+          Кондиціонер
+        </button>
+      </div>
+    </div>
+    <div id="Manual" class="tabcontent"  style="display: none">
+      <div class="dropdown">
+        <div class="shell_drpbtn">
+          <button id="dropbt_1" class="dropbtn color_off_1">Передпокій</button>
+        </div>
+        <div id="myDropdown_1" class="dropdown-content">
+          <div class="item">
+            <div id="btn_1_1" class="btn color_off_1">
+              Локальне підсвічування
+            </div>
+          </div>
+          <div class="item">
+            <div id="btn_1_2" class="btn color_off_1">Загальне освітлення</div>
+          </div>
+          <div class="item">
+            <div id="btn_1_3" class="btn color_off_1">Нічне освітлення</div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+      <div class="dropdown">
+        <div class="shell_drpbtn">
+          <button id="dropbt_2" class="dropbtn color_off_2">Спальня</button>
+        </div>
+        <div id="myDropdown_2" class="dropdown-content">
+          <div class="item">
+            <div id="btn_2_4" class="btn color_off_2">
+              Локальне підсвічування
+            </div>
+          </div>
+          <div class="item">
+            <div id="btn_2_5" class="btn color_off_2">Загальне освітлення</div>
+          </div>
+          <div class="item">
+            <div id="btn_2_6" class="btn color_off_2">Вентиляція</div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="shell_drpbtn">
+          <button id="dropbt_3" class="dropbtn color_off_3">Вбиральня</button>
+        </div>
+        <div id="myDropdown_3" class="dropdown-content">
+          <div class="item">
+            <div id="btn_3_7" class="btn color_off_3">
+              Локальне підсвічування
+            </div>
+          </div>
+          <div class="item">
+            <div id="btn_3_8" class="btn color_off_3">Загальне освітлення</div>
+          </div>
+          <div class="item">
+            <div id="btn_3_9" class="btn color_off_3">Вентиляція</div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="shell_drpbtn">
+          <button id="dropbt_4" class="dropbtn color_off_4">Санвузол</button>
+        </div>
+        <div id="myDropdown_4" class="dropdown-content">
+          <div class="item">
+            <div id="btn_4_10" class="btn color_off_4">
+              Локальне підсвічування
+            </div>
+          </div>
+          <div class="item">
+            <div id="btn_4_11" class="btn color_off_4">Загальне освітлення</div>
+          </div>
+          <div class="item">
+            <div id="btn_4_12" class="btn color_off_4">Дзеркало</div>
+          </div>
+          <div class="item">
+            <div id="btn_4_13" class="btn color_off_4">Вентиляція</div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="shell_drpbtn">
+          <button id="dropbt_5" class="dropbtn color_off_5">Вітальня</button>
+        </div>
+        <div id="myDropdown_5" class="dropdown-content">
+          <div class="item">
+            <div id="btn_5_14" class="btn color_off_5">
+              Локальне підсвічування
+            </div>
+          </div>
+          <div class="item">
+            <div id="btn_5_15" class="btn color_off_5">
+              Загальне освітлення ТРЕК №1
+            </div>
+          </div>
+          <div class="item">
+            <div id="btn_5_16" class="btn color_off_5">
+              Загальне освітлення ТРЕК №2
+            </div>
+          </div>
+          <div class="item">
+            <div id="btn_5_17" class="btn color_off_5">
+              Загальне освітлення ТРЕК №3
+            </div>
+          </div>
+          <div class="item">
+            <div id="btn_5_18" class="btn color_off_5">
+              Загальне освітлення ТРЕК №4
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="shell_drpbtn">
+          <button id="dropbt_6" class="dropbtn color_off_6">Кухня</button>
+        </div>
+        <div id="myDropdown_6" class="dropdown-content">
+          <div class="item">
+            <div id="btn_6_19" class="btn color_off_6">
+              Локальне підсвічування
+            </div>
+          </div>
+          <div class="item">
+            <div id="btn_6_20" class="btn color_off_6">Барна стійка</div>
+          </div>
+          <div class="item">
+            <div id="btn_6_21" class="btn color_off_6">Загальне освітлення</div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="shell_drpbtn">
+          <button id="dropbt_7" class="dropbtn color_off_7">Кабінет</button>
+        </div>
+        <div id="myDropdown_7" class="dropdown-content">
+          <div class="item">
+            <div id="btn_7_22" class="btn color_off_7">
+              Загальне освітленняя
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
