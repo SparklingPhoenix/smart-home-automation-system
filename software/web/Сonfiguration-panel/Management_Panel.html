@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management_Panel'</title>
+    <link rel="stylesheet" href="Management_Panel.css" />
+    <audio id="click" src="Click.wav" autoplay="false"></audio>
+    <audio id="range" src="Range.wav" autoplay="false"></audio>
+    <script src="jquery.js"></script>
+    <script src="Management_Panel.js"></script>
+  </head>
+  <body>
+   
+    <!-- ЕНЕРГО-АУДИТ -->
+    <input type="checkbox" id="hd-1" class="hdv" />
+    <label for="hd-1" style="color: rgb(111, 159, 85)">Енерго-аудит</label>
+    <div class="container" style="color: rgb(111, 159, 85)">
+      <div class="value">       
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Рівень напруги живлення:
+          </p>
+          <pre class="title" id="1">220.0</pre>
+          <pre class="title" style="margin-left: 1%;">В </pre>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Рівень змінного струму:
+          </p>
+          <p class="title" id="2">0</p>
+          <pre class="title" style="margin-left: 1%;">А </pre>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Рівень постійного струму:
+          </p>
+          <p class="title" id="3">0</p>
+          <pre class="title" style="margin-left: 1%;">А </pre>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Споживана потужність ЩО:
+          </p>
+          <pre class="title" id="4">000.0</pre>
+          <pre class="title" style="margin-left: 1%;">Вт</pre>
+        </div>
+        <div class="row_unit" style="margin-bottom: 4px;">
+          <p class="title" style="margin-right: auto">
+            Споживана потужність БЖ12В:
+          </p>
+          <pre class="title" id="5">000.0</pre>
+          <pre class="title" style="margin-left: 1%;">Вт</pre>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Поточна тем-ра БЖ12В:
+          </p>
+          <pre class="title" id="18">00.0</pre>
+          <pre class="title" style="margin-left: 1%;">°С</pre>
+        </div>
+      </div>
+      <div class="value sub" style="flex-wrap: nowrap">
+        <p class="title" style="margin-right: auto">
+          Активувати економ-режим:
+        </p>
+        <div class="title" style="margin-left: auto">
+          <div id="Manag_toggle_1" class="switch-btn"></div>
+        </div>
+      </div>  
+      <div class="value sub" style="flex-wrap: nowrap">
+        <div class="title" style="margin-right: auto; padding-right: 5%;">
+          Автоматична активація економ-режиму у разі відсутності живлення від
+          загальної мережі (перехід на ДБЖ)
+        </div>
+        <div class="title" style="margin-left: auto">
+          <div id="Manag_toggle_2" class="switch-btn"></div>
+        </div>
+      </div>
+      <div class="value sub" style="flex-wrap: nowrap">
+        <div class="title" style="margin-right: auto; padding-right: 5%;">
+          Вимкнення вентиляції в економ-режимі (у разі живлення від ДБЖ)
+        </div>
+        <div class="title" style="margin-left: auto">
+          <div id="Manag_toggle_3" class="switch-btn"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ТЕРМО-АУДИТ -->
+    <input type="checkbox" id="hd-2" class="hdv" />
+    <label for="hd-2" style="color: rgb(203, 109, 85)">Термо-аудит</label>
+    <div class="container" style="color: rgb(203, 109, 85)">    
+      <div class="value">
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Тем-ра повітря всередині:
+          </p>
+          <pre class="title" id="6">    </pre>
+          <pre class="title" style="margin-left: 1%;">°C</pre>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Рівень вологості всередині:
+          </p>
+          <pre class="title" id="7">    </pre>
+          <pre class="title" style="margin-left: 1%;">% </pre>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Тем-ра повітря за вікном:
+          </p>
+          <pre class="title" id="8" style="background-color: inherit;">    </pre>
+          <pre class="title" style="margin-left: 1%;">°C</pre>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Рівень вологості за вікном:
+          </p>
+          <pre class="title" id="9">    </pre>
+          <pre class="title" style="margin-left: 1%;">% </pre>
+        </div>             
+      </div>
+      <div class="value sub">  
+        <div class="row_unit" style="margin-top: 4px;">
+          <div style="margin-right: auto; width: 100%; background-color: inherit; padding: 0%;">
+            <p style="float: left; background-color: inherit; padding: 0;">Корекція сенсора тем-ри повітря всередині:</p>
+          </div>  
+          <pre id="value_4" class="title" style="margin-left: auto">-1.0</pre> 
+          <pre class="title" style="margin-left: 1%;">°C</pre>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: -3°С</p>
+            <p class="title" style="margin-right: auto">max: +3°С</p>
+            <p class="title" style="margin-right: auto">крок: 0.1°С</p>
+          </div>
+          <div class="right_block"> 
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto">
+                <input type="number" min="-3" max="3" step = "0.1" id="Therm_4" class="input_stepper" style="height: 20px"> 
+              </form>
+            </div>
+            <button type="button" id="TrmBtn_4" class="thermo_stepper">Оновити🌡</button>
+          </div>
+        </div>
+        <div class="row_unit" style="margin-top: 10px;">
+          <p class="title" style="margin-right: auto">
+            Корекція сенсора тем-ри повітря за вікном:
+          </p>
+          <pre id="value_5" class="title" style="background-color: inherit;">-1.7</pre> 
+          <pre class="title" style="margin-left: 1%;">°C</pre> 
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: -3°С</p>
+            <p class="title" style="margin-right: auto">max: +3°С</p>
+            <p class="title" style="margin-right: auto">крок: 0.1°С</p>
+          </div>
+          <div class="right_block"> 
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="number" min="-3" max="3" step = "0.1" id="Therm_5" class="input_stepper" style="height: 20px"> 
+              </form>
+            </div>
+            <button type="button" id="TrmBtn_5" class="thermo_stepper">Оновити🌡</button>
+          </div>
+        </div>    
+      </div>
+    </div>
+
+    <!-- ГАЗОВИЙ КОТЕЛ -->
+    <input type="checkbox" id="hd-3" class="hdv" />
+    <label for="hd-3" style="color: rgb(203, 148, 85)">Газовий котел</label>
+    <div class="container" style="color: rgb(203, 148, 85)">    
+      <div class="value">
+        <div class="row_unit"> 
+          <div class="title" style="margin-right: auto">
+            Увімкнути термостат для керування газовим котлом  🔥
+          </div>
+          <div class="title" style="margin-left: auto">
+            <div id="Manag_toggle_4" class="switch-btn"></div>
+          </div>      
+        </div>
+        <div class="row_unit" style="margin-top: 10px">
+          <p class="title" style="margin-right: auto">
+            Поточна тем-ра повітря:
+          </p>
+          <pre class="title" id="TempIN_2">    </pre>
+          <pre class="title" style="margin-left: 1%;">°C</pre>
+        </div>
+        <div class="row_unit" style="margin-top: 2px">
+          <p class="title" style="margin-right: auto">
+            Актуальна уставка термостату:
+          </p>
+          <pre id="value_1" class="title" style="background-color: inherit;">23.5</pre> 
+          <pre class="title" style="margin-left: 1%;">°C</pre> 
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 13°С</p>
+            <p class="title" style="margin-right: auto">max: 27°С</p>
+            <p class="title" style="margin-right: auto">крок: 0.1°С</p>
+          </div>
+          <div class="right_block"> 
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="number" min="13.0" max="25" step = "0.1" id="Therm_1" class="input_stepper" style="height: 20px"> 
+              </form>
+            </div>
+            <button type="button" id="TrmBtn_1" class="thermo_stepper">Оновити🌡</button>
+          </div>
+        </div>
+        <div class="row_unit" style="margin-top: 8px">
+          <p class="title" style="margin-right: auto">
+            Поточний діапазон коливань:
+          </p>
+          <pre class="title" style="margin-left: 1%;">±</pre>
+          <pre class="title" id="value_3" style="background-color: inherit;">0.5</pre>
+          <pre class="title" style="margin-left: 1%;">°C</pre>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Тривалість останнього циклу роботи котла:
+          </p>
+          <pre class="title" id="value_8" style="background-color: inherit;">--</pre>
+          <pre class="title" style="margin-left: 1%;">хв</pre>
+        </div> 
+      </div>
+      <div class="value sub">
+        <div class="row_unit"> 
+          <div class="title" style="margin-right: auto">
+            Автоматично вмикати "економ-режим" у разі активації охорони
+          </div>
+          <div class="title" style="margin-left: auto">
+            <div id="Manag_toggle_5" class="switch-btn"></div>
+          </div>      
+        </div> 
+        <div class="row_unit" style="margin-top: 8px">
+          <div style="margin-right: auto; width: 100%; background-color: inherit; padding: 0%;">
+            <p style="float: left; background-color: inherit; padding: 0; margin-bottom: 2px">Мінімальна уставка "економ-режиму":</p>
+          </div>       
+          <pre id="value_6" class="title" style="margin-left: auto">    </pre> 
+          <pre class="title" style="margin-left: 1%;">°C</pre>
+        </div>  
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 8°С</p>
+            <p class="title" style="margin-right: auto">max: 23°С</p>
+            <p class="title" style="margin-right: auto">крок: 0.1°С</p>
+          </div>
+          <div class="right_block"> 
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="number" min="13.0" max="25" step = "0.1" id="Therm_6" class="input_stepper" style="height: 20px"> 
+              </form>
+            </div>
+            <button type="button" id="TrmBtn_6" class="thermo_stepper">Оновити🌡</button>
+          </div>
+        </div>
+      </div>    
+    </div>    
+        
+    <!-- КОНДИЦІОНЕР -->
+    <input type="checkbox" id="hd-4" class="hdv" />
+    <label for="hd-4" style="color: rgb(75, 166, 176)">Кондиціонер</label>
+    <div class="container" style="color: rgb(75, 166, 176)">      
+      <div class="value">
+        <div class="row_unit"> 
+          <div class="title" style="margin-right: auto">
+            Увімкнути термостат для керування кондиціонером (на охолодження)🥶
+          </div>
+          <div class="title" style="margin-left: auto">
+            <div id="Manag_toggle_6" class="switch-btn"></div>
+          </div>      
+          </div> 
+        <div class="row_unit"> 
+          <div class="title" style="margin-right: auto">
+            Увімкнути термостат для керування кондиціонером (на обігрів) 🌞
+          </div>
+          <div class="title" style="margin-left: auto">
+            <div id="Manag_toggle_12" class="switch-btn"></div>
+          </div>      
+        </div>      
+        <div class="row_unit" style="margin-top: 10px">
+          <p class="title" style="margin-right: auto">
+            Поточна тем-ра повітря:
+          </p>
+          <pre class="title" id="TempIN_1">    </pre>
+          <pre class="title" style="margin-left: 1%;">°C</pre>
+        </div>
+        <div class="row_unit" style="margin-top: 2px">
+          <p class="title" style="margin-right: auto">
+            Поточна уставка термостату:
+          </p>
+          <pre id="value_2" class="title" style="background-color: inherit;">23.5</pre> 
+          <pre class="title" style="margin-left: 1%;">°C</pre> 
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 16°С</p>
+            <p class="title" style="margin-right: auto">max: 35°С</p>
+            <p class="title" style="margin-right: auto">крок: 0.1°С</p>
+          </div>
+          <div class="right_block"> 
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="number" min="16" max="35" step = "0.1" id="Therm_2" class="input_stepper" style="height: 20px"> 
+              </form>
+            </div>
+            <button type="button" id="TrmBtn_2" class="thermo_stepper">Оновити🌡</button>
+          </div>
+        </div>
+        <div class="row_unit" style="margin-top: 10px">
+          <p class="title" style="margin-right: auto">
+            Швидкість обдуву:
+          </p>
+          <pre class="title" id="20"> </pre>
+        </div>          
+      </div>
+      <div class="value sub">
+        <div class="row_unit"> 
+          <div class="title" style="margin-right: auto">
+            Автоматично вмикати "економ-режим" у разі активації охорони
+          </div>
+          <div class="title" style="margin-left: auto">
+            <div id="Manag_toggle_7" class="switch-btn"></div>
+          </div>      
+        </div> 
+        <div class="row_unit" style="margin-top: 8px">
+          <div style="margin-right: auto; width: 85%; background-color: inherit; padding: 0%;">
+            <p style="float: left; background-color: inherit; padding: 0; margin-bottom: 2px">Мінімальна уставка "економ-режиму" (на охолодження)🥶:</p>
+          </div>       
+          <pre id="value_7" class="title" style="margin-left: auto">    </pre> 
+          <pre class="title" style="margin-left: 1%;">°C</pre>
+        </div>  
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 18°С</p>
+            <p class="title" style="margin-right: auto">max: 37°С</p>
+            <p class="title" style="margin-right: auto">крок: 0.1°С</p>
+          </div>
+          <div class="right_block"> 
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="number" min="13.0" max="25" step = "0.1" id="Therm_7" class="input_stepper" style="height: 20px"> 
+              </form>
+            </div>
+            <button type="button" id="TrmBtn_7" class="thermo_stepper">Оновити🌡</button>
+          </div>
+        </div>
+      </div>
+      <div class="value sub">  
+        <div class="row_unit"> 
+          <div class="title" style="margin-right: auto">
+            Не вмикати кондиціонер, якщо у вітальні відкрите вікно
+          </div>
+          <div class="title" style="margin-left: auto">
+            <div id="Manag_toggle_14" class="switch-btn"></div>
+          </div>      
+        </div>
+        <div class="row_unit"> 
+          <div class="title" style="margin-right: auto; width: 75%">
+            Підтримувати критично мінімальну тем-ру повітря (+6°С), щоб не замерз теплоносій у радіаторах (якщо не працює газовий котел) 🌞
+          </div>
+          <div class="title" style="margin-left: auto">
+            <div id="Manag_toggle_13" class="switch-btn"></div>
+          </div>      
+        </div>      
+      </div>       
+    </div>
+
+    <!-- ВЕНТИЛЯЦІЯ -->
+    <input type="checkbox" id="hd-5" class="hdv" />
+    <label for="hd-5" style="color: rgb(145, 115, 194)">Вентиляція</label>
+    <div class="container" style="color: rgb(145, 115, 194)">           
+      <div class="row_unit">
+        <p class="title" style="margin-right: auto">
+          Підтверження комутації вентиляції світловим спалахом:
+        </p>
+        <div class="title" style="margin-left: auto">
+          <div id="Manag_toggle_8" class="switch-btn"></div>
+        </div>
+      </div>
+      <div class="value sub" >  
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Не вмикати вентиляцію у спальні, якщо у вітальні закрите вікно:
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Manag_toggle_9" class="switch-btn"></div>
+          </div>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Автоматично вмикати вентиляцію у спальні, якщо у вітальні відкрили вікно:
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Manag_toggle_10" class="switch-btn"></div>
+          </div>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Застосувати таймер роботи вентиляції у спальні ⏲:
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Manag_toggle_15" class="switch-btn"></div>
+          </div>
+        </div>
+      </div>           
+      <div class="value sub"> 
+        <div class="row_unit">          
+          <p class="title" style="margin-right: auto">
+            Не вмикати вентиляцію у сан.вузлу, якщо у вітальні закрите вікно 
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Manag_toggle_11" class="switch-btn"></div>
+          </div>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Застосувати таймер роботи вентиляції у сан.вузлу ⏲:
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Manag_toggle_16" class="switch-btn"></div>
+          </div>
+        </div>
+      </div>   
+    </div>
+
+    <!-- BLACKOUT -->
+    <input type="checkbox" id="hd-6" class="hdv" />
+    <label for="hd-6" style="color: rgb(172, 91, 149)">Blackout</label>
+    <div class="container" style="color: rgb(172, 91, 149)">
+      Перелік зон освітлення, вентиляції та іншого споживання, що будуть одноразово 
+      вимкнені у разі виклику данної функції:
+      <div class="row_unit" style="margin-top: 12px">
+        <p class="title" style="margin-right: auto">
+          Передпокій:
+        </p>
+        <div class="title" style="margin-left: auto">
+          <div id="Blackout_toggle_1" class="switch-btn"></div>
+        </div>
+      </div>
+      <div class="row_unit" style="margin-top: 12px">
+        <p class="title" style="margin-right: auto">
+          Спальня:
+        </p>
+        <div class="title" style="margin-left: auto">
+          <div id="Blackout_toggle_2" class="switch-btn"></div>
+        </div>
+      </div>
+      <div class="row_unit" style="margin-top: 12px">
+        <p class="title" style="margin-right: auto">
+          Вбиральня:
+        </p>
+        <div class="title" style="margin-left: auto">
+          <div id="Blackout_toggle_3" class="switch-btn"></div>
+        </div>
+      </div>
+      <div class="row_unit" style="margin-top: 12px">
+        <p class="title" style="margin-right: auto">
+          Сан. вузол:
+        </p>
+        <div class="title" style="margin-left: auto">
+          <div id="Blackout_toggle_4" class="switch-btn"></div>
+        </div>
+      </div>
+      <div class="row_unit" style="margin-top: 12px">
+        <p class="title" style="margin-right: auto">
+          Вітальня:
+        </p>
+        <div class="title" style="margin-left: auto">
+          <div id="Blackout_toggle_5" class="switch-btn"></div>
+        </div>
+      </div>
+      <div class="row_unit" style="margin-top: 12px">
+        <p class="title" style="margin-right: auto">
+          Кухня:
+        </p>
+        <div class="title" style="margin-left: auto">
+          <div id="Blackout_toggle_6" class="switch-btn"></div>
+        </div>
+      </div>
+      <div class="row_unit" style="margin-top: 12px">
+        <p class="title" style="margin-right: auto">
+          Лоджія:
+        </p>
+        <div class="title" style="margin-left: auto">
+          <div id="Blackout_toggle_7" class="switch-btn"></div>
+        </div>
+      </div>
+      <div class="row_unit" style="margin-top: 12px">
+        <p class="title" style="margin-right: auto">
+          Витяжка (сан. вузол):
+        </p>
+        <div class="title" style="margin-left: auto">
+          <div id="Blackout_toggle_8" class="switch-btn"></div>
+        </div>
+      </div>
+      <div class="row_unit" style="margin-top: 12px">
+        <p class="title" style="margin-right: auto">
+          Витяжка (вбир./спальня):
+        </p>
+        <div class="title" style="margin-left: auto">
+          <div id="Blackout_toggle_9" class="switch-btn"></div>
+        </div>
+      </div>
+      <div class="row_unit" style="margin-top: 12px">
+        <p class="title" style="margin-right: auto">
+          Amplifier:
+        </p>
+        <div class="title" style="margin-left: auto">
+          <div id="Blackout_toggle_10" class="switch-btn"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ОХОРОНА -->
+    <input type="checkbox" id="hd-7" class="hdv" />
+    <label for="hd-7" style="color: rgb(129, 153, 13)">Охорона</label>
+    <div class="container" style="color: rgb(129, 153, 13)">     
+      <div class="value">
+        <div class="row_unit" style="margin-bottom: 5px">
+          <p class="title" style="margin-right: auto">
+            Активація охорони👮‍♂️:
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Security_toggle_1" class="switch-btn"></div>
+          </div>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Вхідний замок:
+          </p>
+          <pre class="title" id="Security_toggle_3">locked</pre>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Вхідні (внутрішні) двері:
+          </p>
+          <pre class="title" id="Security_toggle_4">locked</pre>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Вікно у вітальні:
+          </p>
+          <pre class="title" id="Security_toggle_11">locked</pre>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Активація тривоги (ревун 110Дб)🚨🔊:
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Security_toggle_2" class="switch-btn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="value sub" >
+        <div class="title" style="margin-right: auto; margin-bottom: 5px">
+          Налаштування функцій системи охорони:
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Короткочасне звукове підтвердження зміни статусу охорони ревуном:
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Security_toggle_5" class="switch-btn"></div>
+          </div>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Звуковий/світловий асистент (відкриті вхідні двери чи замок):
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Security_toggle_6" class="switch-btn"></div>
+          </div>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Функція GSM-виклику (деактивація охорони, режим ALARM):
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Security_toggle_7" class="switch-btn"></div>
+          </div>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Активація охорони після 2х обертів замка:
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Security_toggle_8" class="switch-btn"></div>
+          </div>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Функція "BlackOut" при активації охорони:
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Security_toggle_9" class="switch-btn"></div>
+          </div>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Вмикати світло у передпокої після деактивації охорони та відкриття
+            вхідних дверей:
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Security_toggle_10" class="switch-btn"></div>
+          </div>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Функція "світломузики" у разі тривоги:
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Security_toggle_13" class="switch-btn"></div>
+          </div>
+        </div>
+        <div class="row_unit">
+          <p class="title" style="margin-right: auto">
+            Вмикати ревун 110Дб у разі тривоги:
+          </p>
+          <div class="title" style="margin-left: auto">
+            <div id="Security_toggle_14" class="switch-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+       
+    <!--ВИТРИМКИ/ТАЙМІНГ  -->
+    <input type="checkbox" id="hd-8" class="hdv" />
+    <label for="hd-8" style="color: rgb(154, 146, 129)">Витримки/Таймінг</label>
+    <div class="container" style="color: rgb(154, 146, 129); overflow: auto">        
+      <div class="value">
+        <div class="row_unit">
+          <p class="title">1. Витримка для виклику сервісної функції на механічних клавішах:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 1сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 5сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1сек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="min_excerpt_1" class="title" style="margin-left: auto">00</pre> 
+              <pre class="title" style="margin-left: 2%">хв</pre>
+              <pre id="sec_excerpt_1" class="title" style="margin-left: 5%">01</pre> 
+              <pre class="title" style="margin-left: 2%;">сек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 0px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="1" max="5" step = "1" id="timer_1" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_1_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>      
+      </div>
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">2. Витримка для вибору потрібної комбінації освітлення на механічних клавішах:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 2сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 10сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1сек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="min_excerpt_2" class="title" style="margin-left: auto">00</pre> 
+              <pre class="title" style="margin-left: 2%">хв</pre>
+              <pre id="sec_excerpt_2" class="title" style="margin-left: 5%">03</pre> 
+              <pre class="title" style="margin-left: 2%;">сек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="2" max="10" step = "1" id="timer_2" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_2_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div> 
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">3. Тривалість роботи вентиляції у санвузлу (після вимкнення світла):</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 1хв.</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 12год</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1хв</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="hr_excerpt_3" class="title" style="margin-left: auto">00</pre> 
+              <pre class="title" style="margin-left: 2%">год</pre>
+              <pre id="min_excerpt_3" class="title" style="margin-left: 5%">15</pre> 
+              <pre class="title" style="margin-left: 2%;">хв</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="60" max="43200" step = "60" id="timer_3" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_3_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div>  
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">4. Тривалість роботи вентиляції у спальні/вбиральні:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 20хв</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 12год</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1хв</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="hr_excerpt_4" class="title" style="margin-left: auto">10</pre> 
+              <pre class="title" style="margin-left: 2%">год</pre>
+              <pre id="min_excerpt_4" class="title" style="margin-left: 5%">00</pre> 
+              <pre class="title" style="margin-left: 2%;">хв</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="1200" max="43200" step = "60" id="timer_4" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_4_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div>    
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">5. Витримка для світло-звукового нагадування, що не закритий замок на вхідних дверях:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 3сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 10хв</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1сек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="min_excerpt_5" class="title" style="margin-left: auto">01</pre> 
+              <pre class="title" style="margin-left: 2%">хв</pre>
+              <pre id="sec_excerpt_5" class="title" style="margin-left: 5%">00</pre> 
+              <pre class="title" style="margin-left: 2%;">сек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="3" max="600" step = "1" id="timer_5" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_5_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div>
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">6. Витримка для світло-звукового нагадування, що не закриті внутрішні вхідні двері:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 3сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 10хв</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1сек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="min_excerpt_6" class="title" style="margin-left: auto">02</pre> 
+              <pre class="title" style="margin-left: 2%">хв</pre>
+              <pre id="sec_excerpt_6" class="title" style="margin-left: 5%">00</pre> 
+              <pre class="title" style="margin-left: 2%;">сек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="3" max="600" step = "1" id="timer_6" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_6_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div>
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">7. Інтервал миготіння світла функції світло-звукового нагадування:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 100мсек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 3000мсек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 100мсек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="msec_excerpt_7" class="title" style="margin-left: 5%">1000</pre> 
+              <pre class="title" style="margin-left: 2%;">мсек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="number" min="100" max="3000" step = "100" id="timer_7" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_7_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div>
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">8. Інтервал вимірювання показників мережі живлення (х5):</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 1сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 10сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1сек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="min_excerpt_8" class="title" style="margin-left: auto">00</pre> 
+              <pre class="title" style="margin-left: 2%">хв</pre>
+              <pre id="sec_excerpt_8" class="title" style="margin-left: 5%">01</pre> 
+              <pre class="title" style="margin-left: 2%;">сек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="1" max="10" step = "1" id="timer_8" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_8_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div>
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">9. Інтервал вимірювання температури/вологості повітря всередині:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 4сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 5хв</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1сек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="min_excerpt_9" class="title" style="margin-left: auto">00</pre> 
+              <pre class="title" style="margin-left: 2%">хв</pre>
+              <pre id="sec_excerpt_9" class="title" style="margin-left: 5%">10</pre> 
+              <pre class="title" style="margin-left: 2%;">сек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="4" max="300" step = "1" id="timer_9" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_9_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div>
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">10. Інтервал вимірювання температури/вологості повітря зовні:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 4сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 5хв</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1сек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="min_excerpt_10" class="title" style="margin-left: auto">00</pre> 
+              <pre class="title" style="margin-left: 2%">хв</pre>
+              <pre id="sec_excerpt_10" class="title" style="margin-left: 5%">20</pre> 
+              <pre class="title" style="margin-left: 2%;">сек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="4" max="300" step = "1" id="timer_10" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_10_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div>
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">11. Мінімальна тривалість обов'язкової роботи котла після його старту:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 1хв</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 10хв</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 10сек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="min_excerpt_11" class="title" style="margin-left: auto">04</pre> 
+              <pre class="title" style="margin-left: 2%">хв</pre>
+              <pre id="sec_excerpt_11" class="title" style="margin-left: 5%">00</pre> 
+              <pre class="title" style="margin-left: 2%;">сек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="60" max="600" step = "10" id="timer_11" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_11_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div>  
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">12. Тривалість світло-звукового оповіщення для кнопки дверного дзвінка:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 1сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 10сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1сек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="min_excerpt_12" class="title" style="margin-left: auto">00</pre> 
+              <pre class="title" style="margin-left: 2%">хв</pre>
+              <pre id="sec_excerpt_12" class="title" style="margin-left: 5%">03</pre> 
+              <pre class="title" style="margin-left: 2%;">сек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="1" max="10" step = "1" id="timer_12" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_12_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div>
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">13. Інтервал вимірювання температури БЖ12В:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 8сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 60сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1сек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="min_excerpt_13" class="title" style="margin-left: auto">00</pre> 
+              <pre class="title" style="margin-left: 2%">хв</pre>
+              <pre id="sec_excerpt_13" class="title" style="margin-left: 5%">10</pre> 
+              <pre class="title" style="margin-left: 2%;">сек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="8" max="60" step = "1" id="timer_13" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_13_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div>
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">14. Тривалість циклу роботи кондиціонера (на охолодження)🥶:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 60сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 20хв</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1сек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="min_excerpt_14" class="title" style="margin-left: auto">05</pre> 
+              <pre class="title" style="margin-left: 2%">хв</pre>
+              <pre id="sec_excerpt_14" class="title" style="margin-left: 5%">00</pre> 
+              <pre class="title" style="margin-left: 2%;">сек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="59" max="1200" step = "1" id="timer_14" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_14_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div>
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">15.Мінімально-обов'язковий час роботи/паузи кондиціонера (на охолодження)🥶:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 5хв</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 30хв</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1сек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="min_excerpt_15" class="title" style="margin-left: auto">00</pre> 
+              <pre class="title" style="margin-left: 2%">хв</pre>
+              <pre id="sec_excerpt_15" class="title" style="margin-left: 5%">00</pre> 
+              <pre class="title" style="margin-left: 2%;">сек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="299" max="1800" step = "1" id="timer_15" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_15_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div>
+      <div class="value sub">  
+        <div class="row_unit">
+          <p class="title">16. Витримка відкладеного запуску кондиціонера після закриття вікна:</p>
+        </div>
+        <div class="row_unit">
+          <div class="left_block">
+            <p class="title" style="margin-right: auto">min: 1сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">max: 30сек</p>
+            <p class="title" style="margin: 2px auto 0px 0px">крок: 1сек</p>
+          </div>
+          <div class="right_block"> 
+            <div class="title">
+              <pre id="min_excerpt_16" class="title" style="margin-left: auto">00</pre> 
+              <pre class="title" style="margin-left: 2%">хв</pre>
+              <pre id="sec_excerpt_16" class="title" style="margin-left: 5%">03</pre> 
+              <pre class="title" style="margin-left: 2%;">сек</pre>
+            </div>
+            <div class="value" style="width: 70%; padding: 0px 2px 2px 0px; margin-left: auto">
+              <form style="background-color: inherit; margin-left: auto"> 
+                <input type="time" min="1" max="30" step = "1" id="timer_16" class="input_stepper"> 
+              </form>
+            </div>
+            <button type="button" id="excerpt_16_" class="button_stepper">Оновити ⏳</button>
+          </div>
+        </div>
+      </div> 
+    </div>
+
+    <!-- GSM-МОДЕМ -->
+    <input type="checkbox" id="hd-9" class="hdv" />
+    <label for="hd-9" style="color: rgb(86, 152, 139)">GSM-модем</label>
+    <div class="container" style="color: rgb(86, 152, 139)">
+      Моніторинг стану GSM-модему.
+      <div class="row_unit" style="margin-top: 10px">
+        <p class="title" style="margin-right: auto">
+          Якість GSM сигналу:
+        </p>
+        <pre class="title" id="21"> </pre>
+        <pre class="title" style="margin-left: 1%;">%</pre>
+      </div>
+      <div class="row_unit" style="margin-top: 10px">
+        <p class="title" style="margin-right: auto">
+          Реєстрація в мережі:
+        </p>
+        <pre class="title" id="22"> </pre>
+      </div>
+      <div class="row_unit" style="margin-top: 10px">
+        <p class="title" style="margin-right: auto">
+          Статус GSM модему:
+        </p>
+        <pre class="title" id="23"> </pre>
+      </div>
+      <div class="row_unit" style="margin-top: 10px">
+        <button id="gsm_Btn_1" class="gsm_btn">
+          <div style="background-color: inherit; margin-bottom: 3px; width: 130px">
+            Стан рахунку:
+          </div>  
+        </button>
+        <pre class="title" id="24">    </pre>
+        <pre class="title" style="margin-left: 1%;">грн.</pre>
+      </div>
+    </div>    
+  </body>
+</html>
