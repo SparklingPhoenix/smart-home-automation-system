@@ -8,7 +8,7 @@ from time import sleep
          
 TOKEN = "1234567890:ABCDEFGHIJKLMNOPQRSTUV-ABCDEFGHIJK0"
 bot = telebot.TeleBot(TOKEN)
-CHANNEL_NAME = "-1234567890"
+CHANNEL_NAME = "-0987654321"
 Menu = int()
 My_string = ""
 guard_button_1 = ""
