@@ -19,6 +19,5 @@ Communication parameters:
       Linux
         ├── Apache
         ├── PHP
-        ├── Python
         └── MariaDB
  ```
