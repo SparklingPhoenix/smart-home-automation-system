@@ -323,5 +323,3 @@ The system has been operating continuously in a real residential environment for
 Many algorithms have evolved through practical experience rather than theoretical design, resulting in numerous optimizations and reliability improvements.
 
 Development continues as new automation scenarios and hardware modules are introduced.
-
-#  A description of the sketch will go here
