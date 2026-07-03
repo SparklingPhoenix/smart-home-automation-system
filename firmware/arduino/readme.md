@@ -42,7 +42,7 @@ The project consists of several independent layers.
               Arduino Mega 2560
         (real-time control subsystem)
                      │
- ┌───────────────┬─────────
+ ┌───────────────┬───────────────
  │               │               │
 Sensors      Relays         GSM modem
  │               │               │
