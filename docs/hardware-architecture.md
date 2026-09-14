@@ -42,6 +42,8 @@ Contains air temperature & humidity sensors, wall switchers, reed switchers, vol
 
 ## Hardware Components
 <p align="center">
+  <img src="/images/DIN-rail_mounting_3.jpg">
+  <img src="/images/DIN-rail_mounting_1.jpg.jpg">
   <img src="/images/start-of-instalation-1.jpg">
   <img src="/images/control-cabinet-overview.jpg">
   <img src="/images/controller-stack.jpg"> 
